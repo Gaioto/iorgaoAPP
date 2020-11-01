@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de orgão"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <FrameLayout
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/heightOrgan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.55">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Selecione o orgão"
+            android:textSize="22dp" />
+
+        <Spinner
+            android:id="@+id/spinnerOrgao"
+            android:layout_width="145dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="175dp" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/heightOrgan"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Altura do orgão"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <EditText
+        android:id="@+id/weightOrgan"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Peso do orgão"
+        android:maxEms="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightOrgan"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <EditText
+        android:id="@+id/ageOrgan"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Idade do orgão"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightOrgan"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/conditionOrgan"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Condição do orgão"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageOrgan"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <EditText
+        android:id="@+id/descriptionOrgan"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Descrição do orgão"
+        android:maxEms="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conditionOrgan"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/cadastroOrgan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionOrgan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

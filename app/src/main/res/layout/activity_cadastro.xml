@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/cadastroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Se cadastre para continuar"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.744" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Nome"
+        android:minEms="5"
+        android:singleLine="true"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastroText"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <EditText
+        android:id="@+id/rgUser"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="RG"
+        android:minEms="9"
+        android:maxEms="9"
+        android:singleLine="true"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <EditText
+        android:id="@+id/cpfUser"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="CPF"
+        android:minEms="11"
+        android:maxEms="11"
+        android:singleLine="true"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgUser"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <EditText
+        android:id="@+id/telUser"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Telefone"
+        android:singleLine="true"
+        android:minEms="8"
+        android:maxEms="11"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cpfUser"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Spinner
+        android:id="@+id/generoUser"
+        android:layout_width="190dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telUser"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Spinner
+        android:id="@+id/tipoSangueUser"
+        android:layout_width="102dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telUser"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <EditText
+        android:id="@+id/alturaUser"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="72dp"
+        android:hint="Altura"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pesoUser"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
+        android:hint="Peso"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/senhaUser"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:singleLine="true"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailUser"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <EditText
+        android:id="@+id/emailUser"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:maxLines="1"
+        android:hint="E-mail"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipoSangueUser"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <TextView
+        android:id="@+id/typeUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eu sou um:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senhaUser"
+        app:layout_constraintVertical_bias="0.385" />
+
+    <Spinner
+        android:id="@+id/typeUser"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toEndOf="@+id/typeUserText"
+        app:layout_constraintTop_toBottomOf="@+id/senhaUser"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="64dp"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
