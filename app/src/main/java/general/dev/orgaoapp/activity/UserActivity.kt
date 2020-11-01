@@ -23,6 +23,7 @@ class UserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user)
 
         val intentEndereco = Intent (this, CadastroAdressActivity::class.java)
+        val intentLogin = Intent (this, LoginActivity::class.java)
 
         val patientId: Int = intent.getIntExtra("patient", 0)
         val donatorId: Int = intent.getIntExtra("donator", 0)
@@ -33,6 +34,7 @@ class UserActivity : AppCompatActivity() {
         var tipoSang = findViewById<TextView>(R.id.tipoSangue)
         var email = findViewById<TextView>(R.id.email)
         var cepUser = findViewById<TextView>(R.id.cep)
+        val deslogar = findViewById<Button>(R.id.deslogar)
 
         var id = 0
         var nome = ""
@@ -60,7 +62,11 @@ class UserActivity : AppCompatActivity() {
                     nome = response.body()?.nameDonator.toString()
                     sang = response.body()?.bloodTypeDonator.toString()
                     mail = response.body()?.emailDonator.toString()
-                    idAdress = response.body()?.idAdress!!
+                    if(response.body()?.idAdress == null){
+                        idAdress = 0
+                    }else{
+                        idAdress = response.body()?.idAdress!!
+                    }
                     userId.setText(id.toString())
                     userLogin.setText(nome)
                     tipoSang.setText(sang)
@@ -82,7 +88,11 @@ class UserActivity : AppCompatActivity() {
                             if (response.code().equals(200)) {
                                 Toast.makeText(this@UserActivity, "Logado", Toast.LENGTH_SHORT).show()
                                 cep = response.body()?.zipcodeAdress.toString()
-                                cepUser.setText(cep)
+                                if (cep == null || cep == ""){
+                                    cepUser.setText("CEP não cadastrado")
+                                } else {
+                                    cepUser.setText(cep)
+                                }
                             }
                         }
 
@@ -95,6 +105,10 @@ class UserActivity : AppCompatActivity() {
         endButton.setOnClickListener {
             intentEndereco.putExtra("donatorId", id)
             startActivity(intentEndereco)
+        }
+
+        deslogar.setOnClickListener {
+            startActivity(intentLogin)
         }
 
     }
